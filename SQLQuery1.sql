@@ -1,3 +1,10 @@
+/*
+Covid 19 Data Exploration 
+
+Skills used: Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
+
+*/
+
 select * 
 from SQLProjects..CovidDeaths 
 order by 3,4 
@@ -8,8 +15,8 @@ order by 3,4
   FROM SQLProjects..CovidDeaths 
   order by 1,2 
   
-  --Looking at Total cases vs Total deaths 
----- Shows likelihood of dying if you contract covid in your country 
+--Looking at Total cases vs Total deaths 
+-- Shows likelihood of dying if you contract covid in your country 
   
   SELECT location, date, total_cases, total_deaths, round((total_deaths/total_cases)*100,2) as DeathPercentage 
   FROM SQLProjects..CovidDeaths 
